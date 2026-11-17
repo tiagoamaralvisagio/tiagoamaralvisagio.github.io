@@ -63,6 +63,14 @@
   .qrbox{position:relative;display:flex;flex-direction:column;align-items:center;gap:3.5cqh}
   .qr{width:70cqh;height:70cqh;background:#fff;border-radius:3cqh;padding:3.5cqh}
   .qr svg{display:block;width:100%;height:100%;shape-rendering:crispEdges}
+  .qr{cursor:zoom-in}
+  .qrzoom{position:fixed;inset:0;z-index:50;background:#ffffff;display:none;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:24px;cursor:zoom-out}
+  .qrzoom.show{display:flex}
+  .qrzoom .big{width:min(84vw,62vh);height:min(84vw,62vh)}
+  .qrzoom .big svg{display:block;width:100%;height:100%;shape-rendering:crispEdges}
+  .qrzoom .zname{color:#18252d;font-weight:600;font-size:22px;letter-spacing:.01em;margin-top:4px}
+  .qrzoom .zcap{color:#5b6a71;font-size:15px;text-align:center;line-height:1.4}
+  .qrzoom .zclose{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:none;background:#eef0ea;color:#18252d;font-size:24px;line-height:44px;cursor:pointer}
   .qrcap{font-size:5.6cqh;color:#d6d5c9;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
 
   .hint{font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:-8px;display:flex;align-items:center;gap:6px}
@@ -124,7 +132,7 @@
         <img class="logo" src="logo_light.png" alt="Visagio Group">
         <div class="qrbox">
           <div class="qr"><svg role="img" aria-label="QR code to save Tiago Amaral as a contact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53 53" class="segno"><path class="qrline" stroke="#18252d" d="M0 0.5h7m4 0h3m1 0h1m2 0h4m2 0h1m1 0h3m1 0h3m2 0h1m1 0h1m1 0h1m1 0h2m3 0h7m-53 1h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h5m1 0h1m2 0h1m1 0h1m1 0h4m1 0h1m2 0h3m2 0h1m5 0h1m-53 1h1m1 0h3m1 0h1m2 0h1m1 0h1m2 0h2m2 0h6m1 0h1m1 0h4m1 0h2m1 0h1m4 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-53 1h1m1 0h3m1 0h1m1 0h6m1 0h1m1 0h2m4 0h1m3 0h1m1 0h1m1 0h1m1 0h1m1 0h5m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-53 1h1m1 0h3m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h8m4 0h1m2 0h2m1 0h1m3 0h1m1 0h3m1 0h1m-53 1h1m5 0h1m1 0h1m2 0h4m3 0h1m2 0h2m1 0h1m3 0h1m5 0h6m1 0h2m3 0h1m5 0h1m-53 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-41 1h1m1 0h1m1 0h7m1 0h1m3 0h1m5 0h1m3 0h1m3 0h3m-45 1h5m1 0h3m3 0h4m2 0h2m1 0h1m2 0h5m2 0h1m2 0h4m4 0h4m1 0h1m1 0h1m1 0h1m-50 1h4m4 0h1m1 0h1m3 0h3m2 0h1m1 0h1m1 0h3m1 0h2m1 0h2m1 0h3m2 0h1m1 0h1m6 0h1m1 0h1m-51 1h1m3 0h3m1 0h3m1 0h1m1 0h5m4 0h4m1 0h2m2 0h2m1 0h1m1 0h3m1 0h1m1 0h2m1 0h4m-51 1h1m6 0h4m5 0h1m4 0h1m2 0h2m6 0h2m1 0h1m1 0h1m2 0h1m1 0h3m3 0h1m-47 1h1m1 0h3m1 0h1m2 0h3m1 0h1m1 0h2m1 0h1m3 0h3m1 0h4m2 0h6m7 0h6m-53 1h4m1 0h1m5 0h1m3 0h1m3 0h1m1 0h5m2 0h6m2 0h1m4 0h3m4 0h3m1 0h1m-52 1h7m3 0h2m4 0h1m1 0h1m1 0h1m2 0h2m8 0h7m1 0h4m1 0h2m1 0h2m-51 1h1m1 0h1m1 0h1m3 0h3m1 0h1m2 0h1m4 0h1m1 0h3m2 0h4m1 0h1m6 0h2m1 0h1m3 0h2m2 0h1m-51 1h4m1 0h1m2 0h3m5 0h1m3 0h1m1 0h2m6 0h1m1 0h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h5m-51 1h5m1 0h1m2 0h2m1 0h1m1 0h1m2 0h4m3 0h1m1 0h1m1 0h4m2 0h3m1 0h1m2 0h1m8 0h1m-52 1h1m5 0h2m1 0h1m1 0h3m6 0h3m1 0h2m1 0h1m3 0h3m4 0h1m1 0h1m1 0h3m5 0h1m-51 1h1m2 0h1m6 0h4m1 0h1m1 0h4m2 0h3m1 0h3m1 0h5m4 0h1m5 0h3m3 0h1m-51 1h3m1 0h1m1 0h1m3 0h2m1 0h4m1 0h1m4 0h2m1 0h2m1 0h1m1 0h5m1 0h1m1 0h1m1 0h1m1 0h1m1 0h4m-49 1h1m1 0h1m2 0h2m1 0h2m5 0h1m1 0h1m1 0h2m1 0h4m2 0h2m1 0h1m2 0h1m2 0h2m1 0h2m1 0h1m4 0h1m1 0h1m-53 1h1m1 0h2m2 0h2m1 0h1m2 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m5 0h3m2 0h3m1 0h1m1 0h1m2 0h1m3 0h2m-52 1h6m1 0h2m1 0h1m3 0h1m1 0h3m2 0h5m1 0h1m5 0h1m3 0h1m1 0h2m2 0h3m2 0h2m1 0h2m-50 1h7m1 0h5m2 0h2m2 0h10m3 0h4m4 0h7m-49 1h4m3 0h2m2 0h1m3 0h3m2 0h1m2 0h1m3 0h3m1 0h1m3 0h2m3 0h4m3 0h2m1 0h1m-52 1h2m2 0h1m1 0h1m1 0h1m1 0h1m2 0h4m1 0h2m1 0h1m2 0h1m1 0h1m1 0h2m2 0h5m1 0h2m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m-50 1h1m2 0h1m3 0h2m1 0h1m4 0h2m6 0h1m3 0h2m2 0h1m1 0h1m5 0h1m3 0h1m3 0h1m-48 1h1m1 0h6m1 0h3m2 0h6m2 0h6m2 0h1m2 0h6m4 0h7m-51 1h5m4 0h2m2 0h2m4 0h1m1 0h2m4 0h1m1 0h2m1 0h2m5 0h2m1 0h2m1 0h2m1 0h2m2 0h1m-53 1h1m5 0h2m1 0h3m4 0h2m1 0h1m1 0h1m5 0h2m2 0h1m1 0h2m4 0h1m3 0h2m2 0h2m1 0h2m-50 1h1m5 0h2m2 0h2m1 0h1m8 0h1m5 0h1m3 0h8m1 0h1m3 0h1m1 0h1m1 0h1m-51 1h1m1 0h4m2 0h4m4 0h1m3 0h1m2 0h1m4 0h1m5 0h4m5 0h3m1 0h1m2 0h2m-53 1h1m2 0h3m2 0h1m1 0h2m1 0h1m1 0h1m2 0h3m8 0h3m7 0h2m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m-52 1h1m2 0h5m3 0h2m1 0h1m3 0h1m1 0h1m4 0h1m1 0h2m2 0h4m4 0h1m1 0h1m2 0h1m2 0h3m-50 1h1m2 0h2m2 0h2m2 0h1m2 0h2m1 0h4m1 0h1m4 0h1m2 0h3m1 0h2m1 0h2m1 0h1m2 0h1m3 0h1m3 0h2m-53 1h3m1 0h3m1 0h1m2 0h2m2 0h4m1 0h1m2 0h2m3 0h2m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m3 0h1m2 0h4m-52 1h3m4 0h2m1 0h3m1 0h1m4 0h1m1 0h2m2 0h2m1 0h3m1 0h1m3 0h1m5 0h3m1 0h1m1 0h1m3 0h1m-47 1h1m1 0h1m1 0h7m1 0h2m2 0h1m2 0h4m2 0h2m1 0h2m3 0h1m1 0h1m1 0h1m4 0h4m-52 1h1m1 0h3m2 0h1m3 0h2m1 0h1m1 0h10m4 0h1m2 0h1m1 0h1m1 0h2m1 0h1m3 0h2m1 0h3m-49 1h7m2 0h6m2 0h2m2 0h1m1 0h1m3 0h3m5 0h2m10 0h1m2 0h1m-50 1h3m2 0h1m1 0h3m4 0h3m2 0h1m6 0h3m10 0h2m2 0h1m2 0h1m2 0h1m-52 1h2m1 0h4m1 0h1m1 0h1m3 0h6m2 0h1m3 0h3m2 0h2m1 0h2m3 0h1m2 0h1m-42 1h2m7 0h2m2 0h1m1 0h2m4 0h1m3 0h1m2 0h1m2 0h1m3 0h1m1 0h1m1 0h3m1 0h1m2 0h2m2 0h1m-49 1h1m2 0h2m1 0h2m2 0h6m1 0h2m2 0h6m4 0h3m1 0h2m1 0h2m1 0h9m-45 1h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h2m1 0h1m3 0h5m4 0h1m1 0h2m1 0h3m3 0h1m3 0h1m-53 1h7m1 0h7m1 0h2m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m1 0h1m-52 1h1m5 0h1m2 0h6m1 0h1m6 0h2m3 0h3m1 0h2m2 0h1m1 0h3m1 0h3m3 0h2m2 0h1m-53 1h1m1 0h3m1 0h1m1 0h4m1 0h1m3 0h1m3 0h1m2 0h6m1 0h1m1 0h4m1 0h1m2 0h9m1 0h2m-53 1h1m1 0h3m1 0h1m1 0h1m1 0h3m2 0h1m2 0h3m4 0h1m3 0h3m5 0h1m3 0h3m1 0h2m1 0h2m1 0h1m-52 1h1m1 0h3m1 0h1m1 0h3m1 0h1m7 0h1m1 0h4m1 0h2m4 0h4m3 0h1m2 0h1m3 0h4m1 0h1m-53 1h1m5 0h1m1 0h3m1 0h4m1 0h6m1 0h1m1 0h4m1 0h2m2 0h3m2 0h4m7 0h1m-52 1h7m1 0h1m3 0h2m1 0h4m1 0h1m2 0h2m1 0h2m1 0h3m2 0h4m1 0h1m1 0h2m1 0h2m2 0h3"/></svg></div>
-          <div class="qrcap">Scan to save contact</div>
+          <div class="qrcap">Tap to enlarge</div>
         </div>
       </div>
     </div>
@@ -170,6 +178,13 @@
 
   <footer>VISAGIO GROUP</footer>
 </main>
+
+<div class="qrzoom" id="qrzoom" role="dialog" aria-modal="true" aria-label="Contact QR code">
+  <button class="zclose" id="zclose" aria-label="Close">×</button>
+  <div class="big" id="bigqr"></div>
+  <div class="zname">Tiago Amaral</div>
+  <div class="zcap">Point your phone camera here<br>to save my contact</div>
+</div>
 
 <script>
   // ---------- line art (front of card) ----------
@@ -246,6 +261,26 @@
   const flip = () => scene.classList.toggle('flipped');
   scene.addEventListener('click', flip);
   scene.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+
+  // ---------- QR zoom ----------
+  (function(){
+    const small = document.querySelector('.qr');
+    const zoom = document.getElementById('qrzoom');
+    document.getElementById('bigqr').innerHTML = small.innerHTML;
+    let lock = null;
+    const open = async (e) => {
+      e.stopPropagation();               // do not flip the card
+      zoom.classList.add('show');
+      try { if (navigator.wakeLock) lock = await navigator.wakeLock.request('screen'); } catch (err) {}
+    };
+    const close = () => {
+      zoom.classList.remove('show');
+      try { if (lock) { lock.release(); lock = null; } } catch (err) {}
+    };
+    small.addEventListener('click', open);
+    zoom.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  })();
 
   // ---------- share ----------
   const url = 'https://tiagoamaralvisagio.github.io/';
